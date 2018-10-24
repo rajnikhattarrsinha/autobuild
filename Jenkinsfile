@@ -33,6 +33,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
            
          }
+    }
         
         stage('Pull image') {
         /* Finally, we'll push the image with two tags:
@@ -43,5 +44,5 @@ node {
             docker.pull("rajnikhattarrsinha/autobuild:${env.BUILD_NUMBER}")
         }
         
-    }
-}
+        }
+   }
