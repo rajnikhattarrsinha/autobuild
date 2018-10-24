@@ -41,7 +41,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            docker.pull("rajnikhattarrsinha/autobuild:${env.BUILD_NUMBER}")
+            app = docker.build("rajnikhattarrsinha/autobuild", "--pull .")
         }
         
         }
